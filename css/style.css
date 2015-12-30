@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,600);
+body {
+  height: 100%;
+  width: 100%;
+  background: rgba(40, 40, 40, 0.3);
+}
+
+.container {
+  position: absolute;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hover, .rotate {
+  margin: 0 5%;
+  height: 400px;
+  width: 400px;
+  box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+.hover {
+  background: url("http://sites.psu.edu/annabelspassionblog/wp-content/uploads/sites/8313/2014/03/haystack.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+.hover .filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: rgba(163, 65, 30, 0);
+}
+.hover .vert, .hover .hor {
+  position: absolute;
+  margin: 0 auto;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.hover .hor {
+  top: 37.5px;
+  margin-left: 10px;
+  height: 325px;
+  width: 0px;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
+.hover .vert {
+  margin-top: 12.5px;
+  margin-left: 40px;
+  height: 0px;
+  width: 320px;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+}
+.hover:hover {
+  background-position: right;
+}
+.hover:hover .vert {
+  height: 375px;
+}
+.hover:hover .hor {
+  width: 380px;
+}
+.hover:hover .filter {
+  background: rgba(163, 65, 30, 0.4);
+}
+
+.text {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+.text #cannon {
+  position: relative;
+  right: -5px;
+  font-size: 1.5em;
+  font-weight: 200;
+}
+.text #beach {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.rotate {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.rotate .title {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.rotate .title p {
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 2em;
+  font-weight: 600;
+  margin-top: 300px;
+  z-index: 100;
+  color: white;
+  text-shadow: 2px 2px 2px #000, -2px 2px 0 #000;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+.rotate .filter {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: -webkit-linear-gradient(top, rgba(231, 56, 39, 0) 0%, rgba(231, 56, 39, 0.6) 43%, rgba(246, 41, 12, 0.77) 68%, #f85032 100%);
+  background: linear-gradient(top, rgba(231, 56, 39, 0) 0%, rgba(231, 56, 39, 0.6) 43%, rgba(246, 41, 12, 0.77) 68%, #f85032 100%);
+  -webkit-transition: top 0.5s ease-in;
+  transition: top 0.5s ease-in;
+}
+.rotate .filter p {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  color: white;
+  font-family: "Raleway";
+  font-size: 1.3em;
+  margin-top: 300px;
+}
+.rotate:hover .filter {
+  -webkit-transition: top 0.5s ease-in;
+  transition: top 0.5s ease-in;
+  top: 0px;
+  background: -webkit-linear-gradient(top, rgba(231, 56, 39, 0) 0%, rgba(231, 56, 39, 0.6) 43%, rgba(246, 41, 12, 0.77) 68%, #f85032 100%);
+  background: linear-gradient(top, rgba(231, 56, 39, 0) 0%, rgba(231, 56, 39, 0.6) 43%, rgba(246, 41, 12, 0.77) 68%, #f85032 100%);
+}
+.rotate:hover .title p {
+  margin-top: -10px;
+}
